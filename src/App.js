@@ -5,11 +5,8 @@ import Race from './components/Race';
 import Subclass from './components/Subclass';
 
 function App() {
-  const [character, setCharacter]= useState({
-    'Race': '',
-    'Class': '',
-    'Subclass': ''
-  })
+  const [race, setRace] = useState()
+  const [classType, setClassType] = useState()
   
   function rng(length) {
     return Math.floor(Math.random() * (length - 0) + 0)
@@ -19,8 +16,8 @@ function App() {
     <div className="App">
       <h1>D&D Randomizer</h1>
       <h3>Create A Random Character for Dungeons and Dragons</h3>
-      <Race character={character} setCharacter={setCharacter} rng={rng}/>
-      <Class />
+      <Race race={race} setRace={setRace} rng={rng}/>
+      <Class classType={classType} setClassType={setClassType} rng={rng}/>
       <Subclass />
     </div>
   );
