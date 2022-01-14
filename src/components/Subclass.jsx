@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Subclass = () => {
-  return {
-
-  }
+  return (
+    <h1>Subclass</h1>
+  )
 }
 
 export default Subclass
