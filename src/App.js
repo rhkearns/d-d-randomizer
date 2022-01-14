@@ -7,6 +7,7 @@ import Subclass from './components/Subclass';
 function App() {
   const [race, setRace] = useState()
   const [classType, setClassType] = useState()
+  const [subClass, setSubclass] = useState()
   
   function rng(length) {
     return Math.floor(Math.random() * (length - 0) + 0)
@@ -18,7 +19,7 @@ function App() {
       <h3>Create A Random Character for Dungeons and Dragons</h3>
       <Race race={race} setRace={setRace} rng={rng}/>
       <Class classType={classType} setClassType={setClassType} rng={rng}/>
-      <Subclass />
+      <Subclass classType={classType} subClass={subClass} setSubclass={setSubclass} rng={rng}/>
     </div>
   );
 }
