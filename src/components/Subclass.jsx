@@ -5,7 +5,6 @@ const Subclass = ({classType, subclass, setSubclass, rng}) => {
   const [subclassArray, setSubclassArray] = useState()
   
   const fetchSubclassData = (classType) => {
-    console.log('fetching', classType);
     switch (classType) {
       case 'Barbarian':
         setSubclassArray(subclassData.barbarianSubclasses)
@@ -52,14 +51,12 @@ const Subclass = ({classType, subclass, setSubclass, rng}) => {
   }
 
   const genRandSubclass = () => {
-    console.log('here', subclassArray);
     let idx = rng(subclassArray.length)
-    console.log(subclassArray[idx]);
     setSubclass(subclassArray[idx])
-    console.log('subclass', subclass);
   }
 
   useEffect(() => {
+    setSubclass('')
     fetchSubclassData(classType)
   }, [classType])
 
